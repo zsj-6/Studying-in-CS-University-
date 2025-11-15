@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+int n;
+double a[100];
+
+int main() {
+    cin >> n;
+
+    for (int i = 0; i < n; ++i) {
+        cin >> a[i];
+    }
+
+    int f = 0, z = 0, l = 0;
+
+    for (int j = 0; j < n; ++j) {
+        if (a[j] > 0)
+            ++z;
+        else if (a[j] < 0)
+            ++f;
+        else
+            ++l;
+    }
+
+    cout << f << " " << l << " " << z << endl;
+
+    return 0;
+}
